@@ -237,7 +237,7 @@ class ServerlessAmplifyPlugin {
     );
     graphqlGenerator(schemaFile, operationsFile, {
       language: "graphql",
-      maxDepth: 6,
+      maxDepth: 10,
     });
     return operationsFile;
   }
@@ -713,7 +713,7 @@ class ServerlessAmplifyPlugin {
       const schemaFile = this.getTemporarySchemaFile(resource);
       graphqlGenerator(schemaFile, fileDetails.filename, {
         language: "graphql",
-        maxDepth: 6,
+        maxDepth: 10,
       });
     } else {
       throw new Error(
